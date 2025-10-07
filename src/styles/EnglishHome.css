@@ -1397,3 +1397,30 @@
   color: #444;
   cursor: pointer;
 }
+.social-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.blue-text {
+  color: var(--accent); /* ou #6c63ff pour violet */
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  font-size: 2.5rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: var(--accent);
+}
