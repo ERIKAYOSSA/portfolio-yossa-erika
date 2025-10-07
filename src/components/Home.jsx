@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 import logo from '../assets/logo.png';
-import videoBg from '../assets/vid.MOV'; // Import de la vidéo
+import videoBg from '../assets/vid.MOV'; 
+
 
 const Home = () => {
   const navigate = useNavigate();

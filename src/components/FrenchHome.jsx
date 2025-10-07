@@ -12,6 +12,7 @@ import skillsVideo from '../assets/vid.MOV';
 import projetsImage from '../assets/projets.jpg';
 import projet1Image from '../assets/projet1.jpg';
 import footerVideo from '../assets/footer-video.MOV';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 
 const roles = [
