@@ -118,24 +118,7 @@ const steps = [
     description: 'Lancer avec Git + Netlify et maintenir via des scripts d’automatisation.',
   },
 ];
-const Process = () => {
-  const stepRefs = useRef([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, i * 150);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    stepRefs.current.forEach(el => el && observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-};
 const [activeTab, setActiveTab] = useState('education');
 
 const education = [
