@@ -3,8 +3,6 @@ import logo from '../assets/logo.png';
 import profileImage from '../assets/profile.jpg';
 import profile from '../assets/profile.jpg';
 import '../styles/EnglishHome.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FaLightbulb, FaDraftingCompass, FaCode, FaBug, FaRocket } from 'react-icons/fa';
 import resumePDF from '../assets/resume.pdf';
 import backgroundVideo from '../assets/background.MOV';
