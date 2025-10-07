@@ -12,7 +12,7 @@ import skillsVideo from '../assets/vid.MOV';
 import projetsImage from '../assets/projets.jpg';
 import projet1Image from '../assets/projet1.jpg';
 import footerVideo from '../assets/footer-video.MOV';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 
 const roles = [
@@ -243,19 +243,19 @@ const handleSubmit = (e) => {
               </p>
 
               <div className="social-section">
-                <h3> <span class="blue-text">TROUVE MOI</span></h3>
+                <h3><span className="blue-text">TROUVE MOI</span></h3>
                 <div className="social-icons">
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faFacebook} size="2x" />
-                  </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faInstagram} size="2x" />
-                  </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                  </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <FaFacebook className="social-icon" />
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className="social-icon" />
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="social-icon" />
+                    </a>
                 </div>
-              </div>
+                </div>
             </div>
 
             <div className="right-content">
