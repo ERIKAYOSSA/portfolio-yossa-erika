@@ -11,6 +11,7 @@ import skillsVideo from '../assets/vid.MOV';
 import projetsImage from '../assets/projets.jpg';
 import projet1Image from '../assets/projet1.jpg';
 import footerVideo from '../assets/footer-video.MOV';
+import emailjs from 'emailjs-com';
 
 
 const roles = [
@@ -177,15 +178,16 @@ const [formData, setFormData] = useState({
 });
 
 const handleChange = (e) => {
-  setFormData({ ...formData, [e.target.name]: e.target.value });
-};
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log('Message sent:', formData);
-  // Tu peux connecter à Formspree, EmailJS ou ton backend ici
-  setFormData({ name: '', email: '', subject: '', message: '' });
-};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs.send('service_id', 'template_id', formData, 'user_id')
+      .then(() => alert('Message envoyé !'))
+      .catch((error) => console.error(error));
+  };
+
 
   return (
     <div className={`english-home ${theme === 'dark' ? 'theme-dark' : 'theme-light'}`}>
@@ -502,9 +504,9 @@ const handleSubmit = (e) => {
     <div className="contact-form">
       <h3>Veuillez m'envoyer un message</h3>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} required />
-        <input type="email" name="email" placeholder="Email Address" value={formData.email} onChange={handleChange} required />
-        <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} required />
+        <input type="text" name="name" placeholder="Nom complet" value={formData.name} onChange={handleChange} required />
+        <input type="email" name="email" placeholder="Adresse email" value={formData.email} onChange={handleChange} required />
+        <input type="text" name="subject" placeholder="Sujet" value={formData.subject} onChange={handleChange} required />
         <textarea name="message" placeholder="Message" rows="5" value={formData.message} onChange={handleChange} required></textarea>
         <button type="submit">ENVOYER</button>
       </form>
